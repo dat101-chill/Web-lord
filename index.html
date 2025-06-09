@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="E-Shop Logo" style= "width: 200px;height: 100px;">
+            </a>
+            <div class="search-container" style="position: relative;">
+                <input type="text" placeholder="Search products..." class="search-bar">
+                <div class="search-suggestions hidden"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="cart-link">
+                    <img src="C:\Users\admin\OneDrive\Pictures\shopping-cart-icon---vector-template---transparent-background_1794341.png!f305cw" alt="Cart" class="icon cart-icon">
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="login-link">
+                    <img src="C:\Users\admin\OneDrive\Pictures\avatar-trang-4.jpg" alt="Login" class="icon login-icon">
+                    <span>Login</span>
+                </a>
+            </div>
+        </nav>
+        <div class="category-menu">
+            <a href="#" class="category-item" onclick="showCategory('gia-dung')">
+                <img src="img/24b194a695ea59d384768b7b471d563f@resize_w640_nl.webp" alt="Gia dụng" class="category-icon"> Gia dụng
+            </a>
+            <a href="#" class="category-item" onclick="showCategory('quan-ao')">
+                <img src="img/687f3967b7c2fe6a134a2c11894eea4b@resize_w640_nl.webp" alt="Quần áo" class="category-icon"> Quần áo
+            </a>
+            <a href="#" class="category-item" onclick="showCategory('thiet-bi-dien-tu')">
+                <img src="img/978b9e4cb61c611aaaf58664fae133c5@resize_w640_nl.webp" alt="Thiết bị điện tử" class="category-icon"> Thiết bị điện tử
+            </a>
+            <a href="#" class="category-item" onclick="showCategory('qua-tang')">
+                <img src="img/ce8f8abc726cafff671d0e5311caa684@resize_w640_nl.webp" alt="Quà tặng" class="category-icon"> Quà tặng
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="suggested-products" class="products hidden">
+            <div class="product">
+                <img src="img/vn-11134207-7r98o-lrol6kavr6hl42.webp" alt="Sản phẩm 1">
+                <p class="brand">Levi's</p>
+                <p class="product-name">Áo Thun Polo Nam Thêu Chữ U</p>
+                <div class="star-rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+                <p class="price">
+                    <span class="original-price">₫226.000</span>
+                    <span class="discounted-price">₫196.000</span>
+                </p>
+            </div>
+            <div class="product">
+                <img src="img/vn-11134207-7ras8-m2cuk4dio0xg83.webp" alt="Sản phẩm 2">
+                <p class="brand">Levi's</p>
+                <p class="product-name">Tai nghe Bluetooth 5.3 không dây</p>
+                <div class="star-rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+                <p class="price">
+                    <span class="original-price">₫156.000</span>
+                    <span class="discounted-price">₫51.900</span>
+                </p>
+            </div>
+        </section>
+        <section id="gia-dung" class="products category hidden">
+            <div class="product">
+                <img src="img/mayxaysinhto.webp" alt="Máy xay sinh tố">
+                <p>Máy Xay Sinh Tố Đa Năng KAW SILVER CREST SC-1589</p>
+                <p>Giá: ₫308.000
+                    </p>
+            </div>
+            <div class="product">
+                <img src="img/lò vi sóng.webp" alt="Gia dụng">
+                <p>Lò vi sóng Cuckoo 20 lít CMW-A201D</p>
+                <p>Giá: ₫1.290.000</p>
+            </div>
+            <div class="product">
+                <img src="img/gia dụng 1.webp" alt="Gia dụng">
+                <p>Khăn Tắm Sumi Lớn Kích Thước 70x140cm Chất Liệu Cotton San Hô Thấm Hút Kháng Khuẩn Tốt</p>
+                <p>Giá: ₫18.900</p>
+            </div>
+            <div class="product">
+                <img src="img/giadungj 2.webp" alt="Gia dụng">
+                <p>Cây Lau Bàn Bếp Tự Vắt Thông Minh Mini 25cm, Bọt Biển Siêu Thấm Hút Đa Năng, Gập Gọn dễ sử dụng</p>
+                <p>Giá: ₫16.379</p>
+            </div>
+            <div class="product">
+                <img src="img/gia dụng 3.webp" alt="Gia dụng">
+                <p>Thùng rác lưới thép màu đen,công nghệ nướng kim loại,giỏ đựng giấy vụn văn phòng/sọt đựng quần áo bẩn</p>
+                <p>Giá: ₫29.000</p>
+            </div>
+        </section>
+        <section id="quan-ao" class="products category hidden">
+            <div class="product">
+                <img src="img/vn-11134207-7r98o-lrol6kavr6hl42.webp" alt="Quần áoáo">
+                <p>Áo Thun Polo Nam Thêu Chữ U,Chất Liệu Thấm Hút Mồ Hôi,Cổ Phối Màu</p>
+                <p>Giá: ₫196.000</p>
+            </div>
+            <div class="product">
+                <img src="img/quầnnjean.webp" alt="Quần áo">
+                <p>Quần jeans nữ dáng ôm skinny lưng cao Avocado</p>
+                <p>Giá: ₫176.000</p>
+            </div>
+            <div class="product">
+                <img src="img/quần áo 1.webp" alt="Quần áo">
+                <p>Áo polo nữ TOLI 16 màu trơn, cổ bẻ thanh lịch, Form vừa ôm nhẹ, vải cotton 4 chiều cao cấp - PLM26</p>
+                <p>Giá: ₫172.000</p>
+            </div>
+            <div class="product">
+                <img src="img/quần áo 3.webp" alt="Quần áo">
+                <p>Áo Kiểu Nữ Trễ Vai Tay Bồng Có Dây Thắt Eo Mùa Hè Noiree - NA473</p>
+                <p>Giá:₫119.000</p>
+            </div>
+                <div class="product">
+                    <img src="img/quần áo 2.webp" alt="Quần áo">
+                    <p>Quần Jean Ống Rộng WIDE LEG tôn dáng cạp cao form unisex nam nữ JS02</p>
+                    <p>Giá: ₫144.000</p>
+            </div>
+        </section>
+        <section id="thiet-bi-dien-tu" class="products category hidden">
+            <div class="product">
+                <img src="img/laptop1.webp" alt="Electricals">
+                <p>Laptop ASUS Vivobook S 14 OLED S5406SA-PP059WS Intel Core Ultra 7 258V </p>
+                <p>Giá:₫34.890.000</p>
+            </div>
+            <div class="product">
+                <img src="img/phone1.webp" alt="Electricals">
+                <p>iPhone 16 Pro Max 256GB Chính Hãng VN/A</p>
+                <p>Giá: ₫32.290.000</p>
+            </div>
+            <div class="product">
+                <img src="img/tbdt2.webp" alt="Electricals">
+                <p>Điện Thoại Samsung Galaxy S24 Ultra 12GB/256GB</p>
+                <p>Giá: ₫33.990.000</p>
+            </div>
+            <div class="product">
+                <img src="img/tbdt1.webp" alt="Electricals">
+                <p>Tai nghe Bluetooth không dây A6STWS 5.0 In-Ear thể thao có micrô cho iPhone Xiaomi</p>
+                <p>Giá: ₫51.700 </p>
+            </div>
+            <div class="product">
+                <img src="img/tbdt3.webp" alt="Electricals">
+                <p>Điện thoại thông minh Xiaomi 15 Ultra (16+512GB) </p>
+                <p>Giá: ₫31.990.000</p>
+            </div>
+        </section>
+        <section id="qua-tang" class="products category hidden">
+            <div class="product">
+                <img src="img/quà1.webp" alt="Quà tặng">
+                <p>Set Quà Tặng Nến Thơm Aroma Story Dành Tặng Người Yêu, Sinh Nhật, Kỷ Niệm</p>
+                <p>Giá: ₫94.000</p>
+            </div>
+            <div class="product">
+                <img src="img/quà2.webp" alt="Quà tặng">
+                <p>Bộ quà tặng bạn gái 8/3 giáng sinh , hộp quà tặng sinh nhật,ngày lễ noel combo túi chườm đau bụng 350ml</p>
+                <p>Giá: ₫179.000</p>
+            </div>
+            <div class="product">
+                <img src="img/quà3.webp" alt="Quà tặng">
+                <p>Bộ quà tặng nến và sáp thơm ONIÕ, hương thơm tinh dầu thiên nhiên, handmade 100%, GS-002</p>
+                <p>Giá: ₫238.400</p>
+            </div>
+            <div class="product">
+                <img src="img/quà4.webp" alt="Quà tặng">
+                <p>Bộ Trang Sức CELINA Tif Watches Quà Tặng Sinh Nhật, Tết, Valentine Set Đồng Hồ Nữ </p>
+                <p>Giá: ₫550.000</p>
+            </div>
+            <div class="product">
+                <img src="img/quà5.webp" alt="Quà tặng">
+                <p>Sáng Tạo Tự Làm Hoa Tulip Biển Khối Ba Chiều Nhỏ Đèn Ngủ Chất Liệu Gói Cho Bạn Gái</p>
+                <p>Giá: ₫42.900</p>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
